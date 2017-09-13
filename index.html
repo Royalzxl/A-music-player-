@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" onselecterstart="return false">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="Author" content="ZengXiaoLong"/>
+        <script>
+            var Ratio = 1 / window.devicePixelRatio; // window.devicePixelRatio 表设备像素比
+            document.write('<meta name="viewport" content="width=device-width,initial-scale='+Ratio+',minimum-scale='+Ratio+',maximum-scale='+Ratio+',user-scalable=no" />');
+        </script>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"/>                     <!--兼容处理-->
+        <title>Please enter your title</title>
+        <link rel="stylesheet" href="css/index.css"/>
+    </head>
+    <body >
+        <!--播放页面-->
+        <div id="wrapper">
+            <!-- bg  背景图 -->
+            <div class="bg"></div>
+            <div class="bg-mask"></div>
+            <!-- header  顶部歌曲名,歌手名 -->
+            <div id="header">
+                <div id="back"></div>
+                <div class="song" id="songName">为龙</div>
+                <div class="singer" id="singer">司夏</div>
+            </div>
+            <!-- center  中间部分 -->
+            <div id="center">
+                <img id="needle" class="play-needle" src="images/play_needle.png" alt="">
+                <div class="disk-bg"></div>
+                <div class="diskM">
+                    <img class="disk-album-bg" src="images/1.jpg" alt=""  >
+                    <img class="disk-music-bg" src="images/play_disc.png" alt="">
+                </div>
+                <div class="diskM">
+                    <img class="disk-album-bg" src="" alt=""  >
+                    <img class="disk-music-bg" src="images/play_disc.png" alt="">
+                </div>
+            </div>
+            <!-- 歌词 -->
+            <div class="lyric">
+                <div id="line"></div>
+                <ul></ul>
+            </div>
+            <!-- footer 底部 -->
+            <div id="footer">
+                <!--process 进度条部分 -->
+                <div id="process">
+                    <!--currentTime 当前时间 -->
+                    <span id="currentTime">00:00</span>
+                    <!--process-bar 进度条 -->
+                    <div id="process-bar">
+                        <div id="process-all"></div>
+                        <div id="process-cur">
+                            <span id="cur-btn"></span>
+                        </div>
+                        <div id="process-ready"></div>
+                    </div>
+                    <!--total-time 总时间 -->
+                    <span id="total-time"></span>
+                </div>
+                <div id="control">
+                    <!--loop 循环按钮  -->
+                    <span class="loop"></span>
+                    <!--pre 上一曲按钮  -->
+                    <span class="prev"></span>
+                    <!--play 播放按钮  -->
+                    <span class="play"></span>
+                    <!--pause 暂停按钮  -->
+                    <span class="pause" style="display:none"></span>
+                    <!--next 下一曲按钮  -->
+                    <span class="next"></span>
+                    <!--list 列表按钮  -->
+                    <span class="list"></span>
+                </div>
+            </div>
+            <div id="list-mask"></div><!--遮罩层 解决事件源不对的问题-->
+            <div id="play-list">
+                <div>
+                    <div class="list-title">播放列表(<span id="playListCount"></span>)</div>
+                    <div class="list-title-close">×</div>
+                </div>
+                <!-- 歌曲列表 -->
+                <ul></ul>
+            </div>
+            <!--主页-->
+            <div id="stage">
+                <section class="container">
+                    <div class="list1">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/1.jpg" alt="">
+                    </div>
+                    <div class="list2">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/2.jpg" alt="">
+                    </div>
+                    <div class="list3">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/3.jpg" alt="">
+                    </div>
+                    <div class="list4">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/4.jpg" alt="">
+                    </div>
+                    <div class="list5">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/5.jpg" alt="">
+                    </div>
+                    <div class="list6">
+                        <img class="disk" src="css/images/disk.png" alt="">
+                        <img class="img" src="images/6.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div style="display:none">
+            <audio src="mp3/1Angelika Vee - Burn.mp3"></audio>
+        </div>
+
+        <script type="text/javascript" src="js/lyrics.js"></script>
+        <script type="text/javascript" src="js/data.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+    </body>
+</html>
